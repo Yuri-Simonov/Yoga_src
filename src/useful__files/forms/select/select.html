@@ -1,0 +1,60 @@
+<!-- Стилизация селекта -->
+
+<style>
+	.select-wrapper {
+		position: relative;
+		width: 400px;
+		display: inline-block;
+		margin-bottom: 17px;
+	}
+
+	.select {
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: normal;
+	}
+
+	.select,
+	.option {
+		width: 100%;
+		background: #474747;
+		border: 1px solid #a1a1a1;
+		border-radius: 5px;
+		padding: 9px 18px;
+		display: block;
+		color: #fff;
+	}
+
+	.select,
+	.option {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		/* background: url(./arrow-down.svg) no-repeat right, #474747;
+		background-position-x: calc(100% - 8px); */
+	}
+
+	.select-wrapper svg {
+		position: absolute;
+		top: 50%;
+		left: calc(100% - 35px);
+		transform: translateY(-50%);
+		width: 24px;
+		height: 24px;
+	}
+</style>
+
+<div class="select-wrapper">
+	<select name="delivery" id="delivery" class="select">
+		<option class="option" value="S">S
+		</option>
+		<option class="option" value="M">M</option>
+		<option class="option" value="L">L</option>
+		<option class="option" value="XL">XL</option>
+	</select>
+	<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path
+			d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 111.41 1.41l-4.59 4.59a.996.996 0 01-1.41 0L6.7 10.7a.996.996 0 010-1.41c.39-.38 1.03-.39 1.42 0z"
+			fill="#fff" />
+	</svg>
+</div>

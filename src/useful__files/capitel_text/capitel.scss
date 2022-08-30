@@ -1,0 +1,19 @@
+.parent {
+		font-size: 16px;
+		line-height: 1.2;
+		text-align: left;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		&::first-letter,
+		p::first-letter {
+			font-size: 20px;
+			color: red;
+		}
+		display: inline-block;
+	}		
+
+.span-big {
+	font-size: 20px;
+	line-height: 1;
+	color: red;
+}

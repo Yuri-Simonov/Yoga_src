@@ -1,0 +1,73 @@
+При использовании плагина "gulp-webp-html-nosvg" имеется небольшой нюанс. Если тег картинки (<img src="" />) располагаться на одной строке все - ОК. Если VsCode отформатировал тег на несколько строк:
+<img
+    class="category-card__img"
+    src="@img/category/cat-02.png"
+    alt="cat-02"
+/>
+Сборщик gulp упадет с ошибкой: gulp-notify: [HTML] Error: Callback called multiple times.
+
+Как временное решения в плагине gulp-webp-html-nosvg/index.js:
+module.exports = function (extensions) {
+	var extensions = ['.jpg', '.png', '.jpeg', '.GIF', '.gif', '.JPG', '.PNG', '.JPEG'];
+	console.log("Start gulp-webp-html-nosvg");
+	var img_line = "";
+	return through.obj(function (file, enc, cb) {
+		if (file.isNull()) {
+			cb(null, file)
+			return
+		}
+		if (file.isStream()) {
+			cb(new PluginError(pluginName, 'Streaming not supported'))
+			return
+		}
+		try {
+			var pictureRender = function (url, imgTag) {
+				let srcset = imgTag.indexOf('data-src') >= 0 ? "data-srcset" : "srcset";
+				return (`<picture><source ${srcset}="${url}" type="image/webp">${imgTag}</picture>`)
+			}
+			var inPicture = false
+			const data = file.contents
+				.toString()
+				.split('\n')
+				.map(function (line) {
+					img_line = img_line.concat(" ", line);
+					// Вне <picture/>?
+					if (img_line.indexOf('<picture') + 1) inPicture = true
+					if (img_line.indexOf('</picture') + 1) inPicture = false
+					// Проверяем есть ли <img/>
+					if (img_line.indexOf('<img') + 1 && !inPicture) {
+						// Новый урл с .webp
+						var Re = /<img([^>]*)src=\"(\S+)\"([^>]*)>/gi			
+						var regexpArray = Re.exec(img_line)
+						if (regexpArray === null) {
+							return "";
+						} 
+						var imgTag = regexpArray[0]
+						var newUrl = regexpArray[2]
+						// Если в урле есть .webp или .svg, пропускаем
+						if (newUrl.indexOf('.webp') + 1 || newUrl.indexOf('.svg') + 1) {
+							img_line = '';
+							return line;
+						}
+						// Заменяем все расширения на .webp
+						for (k in extensions) {
+							newUrl = newUrl.replace(extensions[k], '.webp')
+						}
+						// Компилим <picture/>
+						var newHTML = pictureRender(newUrl, imgTag)
+						line = img_line.replace(imgTag, newHTML).replace(/\s+/g,' ')
+						img_line = '';
+						return line
+					}
+					img_line = '';
+					return line
+				})
+				.join('\n')
+			file.contents = new Buffer.from(data)
+			this.push(file)
+		} catch (err) {
+			this.emit('error', new PluginError(pluginName, err))
+		}
+		cb()
+	})
+}

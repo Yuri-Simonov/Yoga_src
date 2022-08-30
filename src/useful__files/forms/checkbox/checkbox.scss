@@ -1,0 +1,45 @@
+.checkbox {
+	display: block;
+	cursor: pointer;
+
+	&__input {
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		position: absolute;
+		&:checked + .checkbox__span {
+			background: rgb(29, 31, 28);
+			svg {
+				display: block;
+			}
+		}
+	}
+
+	&__span {
+		position: relative;
+		margin-top: 20px;
+		display: inline-block;
+		margin-right: 10px;
+		width: 20px;
+		height: 20px;
+		background-color: rgb(114, 9, 82);
+		border: 1px solid black;
+		border-radius: 4px;
+		vertical-align: sub;
+		svg {
+			display: none;
+		}
+	}
+
+	&__text {
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 24px;
+		height: 24px;
+	}
+}

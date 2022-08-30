@@ -1,0 +1,24 @@
+.some-element {
+	// стилизация скролла для Firefox
+	scrollbar-color: $orange $gray; /* «цвет ползунка» «цвет полосы скроллбара» */
+	scrollbar-width: thin;
+
+	// стилизация скролла для Chrome
+	&::-webkit-scrollbar {
+		// это фон самого скроллбара
+		background-color: $gray;
+		border-radius: 5px;
+		width: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		// индикатор прокрутки, перетаскиваемый элемент.
+		background-color: $orange;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-button {
+		// кнопки направления на полосе прокрутки.
+	}
+	&::-webkit-scrollbar-track {
+		// пустое пространство под индикатором прокрутки.
+	}
+}
