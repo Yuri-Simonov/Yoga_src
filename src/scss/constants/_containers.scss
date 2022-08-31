@@ -1,13 +1,10 @@
 // Переменные ================================================
 
 // Ширина внешнего контейнера
-$outer_container: 1600px;
+$outer_container: 1920px;
 
 // Ширина внутреннего контейнера
-$inner_container: 1200px;
-
-// Паддинги внешнего контейнера
-$paddings_outer_container: 0 15px;
+$inner_container: 1480px;
 
 // Паддинги внутреннего контейнера
 $paddings_inner_container: 0 15px;
@@ -16,10 +13,10 @@ $paddings_inner_container: 0 15px;
 $font_family_common: "Poppins", sans-serif;
 
 // Основной размер шрифта
-$font_size_common: 16px;
+$font_size_common: 14px;
 
 // Основная высота шрифта
-$font_line-height_common: 120%;
+$font_line-height_common: 150%;
 
 // Основной цвет шрифта
 $font_color_common: #000000;
@@ -47,7 +44,6 @@ $font_color_common: #000000;
 	}
 	max-width: $outer_container;
 	margin: 0 auto;
-	padding: $paddings_outer_container;
 }
 
 // Внутренний контейнер
