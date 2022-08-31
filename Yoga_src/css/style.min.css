@@ -101,10 +101,31 @@ body {
   word-break: break-word;
 }
 
-input {
+input,
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+button {
+  background-color: inherit;
+}
+
+* {
+  scrollbar-color: #000000 #ffffff;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 .header {
@@ -268,4 +289,134 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+.auth {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth__form {
+  width: 100%;
+}
+.auth .title {
+  text-align: center;
+}
+
+.auth-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 620px;
+  min-height: 612px;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 45px;
+  margin: 0 auto;
+}
+@media (max-width: 620px), (max-height: 440px) {
+  .auth-form {
+    width: 100%;
+    min-height: auto;
+  }
+}
+@media (max-width: 440px), (max-height: 440px) {
+  .auth-form {
+    padding: 15px 15px 40px;
+  }
+}
+.auth-form::before, .auth-form::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 80px;
+  height: 100%;
+  top: 0;
+  transform: translateX(-50%);
+  left: 0;
+  background: radial-gradient(55.4% 49.27% at 51.44% 49.99%, #c4c4c4 0%, #d6d6d6 18%, #ececec 48%, #fafafa 76%, #ffffff 100%);
+  opacity: 0.49;
+}
+@media (max-width: 620px), (max-height: 440px) {
+  .auth-form::before, .auth-form::after {
+    display: none;
+  }
+}
+.auth-form::after {
+  left: 100%;
+}
+.auth-form__prompt {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  margin-bottom: 65px;
+}
+@media (max-width: 620px), (max-height: 440px) {
+  .auth-form__prompt {
+    margin-bottom: 30px;
+  }
+}
+.auth-form__prompt span {
+  color: #b8b8b8;
+  margin-right: 4px;
+}
+.auth-form__prompt a {
+  color: #4623e9;
+}
+.auth-form__fields {
+  margin-bottom: 51px;
+  width: 100%;
+}
+.field span {
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+}
+.field input {
+  width: 100%;
+  height: 38px;
+  padding: 10px 40px 6px 19px;
+  background: #fafbff;
+  border-radius: 20px;
+}
+.field input::placeholder {
+  color: #acacac;
+}
+
+.field + .field {
+  margin-top: 6px;
+}
+
+.submit {
+  width: 286px;
+  min-height: 38px;
+  background: #5932ea;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.submit:hover {
+  background: #3713bc;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #000000;
 }

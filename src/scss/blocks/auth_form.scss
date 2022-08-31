@@ -1,0 +1,69 @@
+.auth-form {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 620px;
+	min-height: 612px;
+	border-radius: 20px;
+	background: $white;
+	padding: 45px;
+	margin: 0 auto;
+
+	@media (max-width: 620px), (max-height: 440px) {
+		width: 100%;
+		min-height: auto;
+	}
+	@media (max-width: 440px), (max-height: 440px) {
+		padding: 15px 15px 40px;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		width: 80px;
+		height: 100%;
+		top: 0;
+		transform: translateX(-50%);
+		left: 0;
+		background: $radian;
+		opacity: 0.49;
+		@media (max-width: 620px), (max-height: 440px) {
+			display: none;
+		}
+	}
+	&::after {
+		left: 100%;
+	}
+
+	&__prompt {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		text-align: center;
+		margin-bottom: 65px;
+		@media (max-width: 620px), (max-height: 440px) {
+			margin-bottom: 30px;
+		}
+
+		span {
+			color: $gray;
+			margin-right: 4px;
+		}
+		a {
+			color: $purple;
+		}
+	}
+
+	&__fields {
+		margin-bottom: 51px;
+		width: 100%;
+	}
+
+	&__submit {
+	}
+}
