@@ -257,23 +257,6 @@ button {
   flex-direction: column;
 }
 
-.container-outer {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 1920px;
-  margin: 0 auto;
-}
-@media (min-width: 1921px) {
-  .container-outer {
-    width: 1920px;
-  }
-}
-@media (max-width: 1920px) {
-  .container-outer {
-    width: 100%;
-  }
-}
-
 .container-inner {
   max-width: 1480px;
   margin: 0 auto;
@@ -285,10 +268,123 @@ body {
   font-size: 14px;
   line-height: 150%;
   color: #000000;
+  background: #fafbff;
 }
 
 main {
   flex-grow: 1;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  max-height: 100vh;
+  overflow: auto;
+  background: #ffffff;
+  padding: 20px 22px 20px 28px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 440px), (max-height: 440px) {
+  .menu {
+    padding: 15px;
+    width: 260px;
+  }
+}
+.menu__header {
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 440px), (max-height: 440px) {
+  .menu__header {
+    margin-bottom: 16px;
+  }
+}
+.menu__header-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+@media (max-width: 440px), (max-height: 440px) {
+  .menu__header-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+.menu__header-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000000;
+}
+.menu__header-role {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  color: #9197b3;
+}
+.menu__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.menu__sections {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+@media (max-width: 440px), (max-height: 440px) {
+  .menu__sections {
+    gap: 6px;
+  }
+}
+.menu__section {
+  cursor: pointer;
+  position: relative;
+  padding: 13px 30px 13px 13px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all 0.3s ease;
+}
+.menu__section a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #9197b3;
+}
+.menu__section > svg {
+  width: 20px;
+  height: 20px;
+}
+.menu__section_active, .menu__section:hover {
+  background: #5932ea;
+  border-radius: 10px;
+}
+.menu__section_active svg path, .menu__section:hover svg path {
+  fill: transparent;
+  stroke: #ffffff;
+}
+.menu__section_active a, .menu__section:hover a {
+  color: #ffffff;
+}
+.menu__section:last-child {
+  margin-top: auto;
+}
+.menu__section-arrow {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
 }
 
 .auth {
