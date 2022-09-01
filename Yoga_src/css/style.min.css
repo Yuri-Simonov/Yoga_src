@@ -643,6 +643,30 @@ main {
   }
 }
 
+.schedule {
+  display: flex;
+  flex-direction: column;
+}
+.schedule__content {
+  flex-grow: 1;
+  display: flex;
+  gap: 35px;
+  margin-bottom: 30px;
+  overflow: auto;
+}
+.schedule__timetable {
+  flex: 0 0 1075px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 32px 32px 78px;
+  align-self: flex-start;
+}
+.schedule__sidebar {
+  flex: 0 0 370px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 27px;
+}
 .auth-form {
   position: relative;
   display: flex;
@@ -779,4 +803,91 @@ main {
 
 .gradient-green {
   background: linear-gradient(201.18deg, #d3ffe7 3.14%, #effff6 86.03%);
+}
+
+.pink {
+  background-color: #fff0fb;
+  transition: all 0.3s ease;
+}
+.pink:hover {
+  background-color: #ffbded;
+}
+
+.green {
+  background-color: #f3fff6;
+  transition: all 0.3s ease;
+}
+.green:hover {
+  background-color: #c0ffd0;
+}
+
+.timetable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 6px;
+}
+.timetable__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.timetable__row_dates > .timetable__col {
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+.timetable__col {
+  position: relative;
+  border-radius: 10px;
+  background: #f0f0f0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #757575;
+  width: 132px;
+  height: 72px;
+}
+.timetable__col_empty {
+  background-color: transparent;
+  width: 44px;
+}
+.timetable__col_time {
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.timetable-event {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 7px 13px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.timetable-event__time {
+  max-width: 80%;
+}
+.timetable-event__time, .timetable-event__trainer, .timetable-event__sport {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+}
+.timetable-event__toggler {
+  position: absolute;
+  top: 3px;
+  right: 10px;
 }

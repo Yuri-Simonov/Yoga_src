@@ -32,6 +32,9 @@
 // Страница Dashboard
 @import "pages/dashboard";
 
+// Страница Schedule
+@import "pages/schedule";
+
 // Повторяющиеся блоки =========================================
 
 // Форма авторизации и регистрации
@@ -48,5 +51,17 @@
 
 // Классы для расскрашивания элементов
 @import "blocks/colors_elements";
+
+// Классы для расскрашивания элементов
+@import "blocks/add_class";
+
+// Классы для расскрашивания элементов
+@import "blocks/calendar";
+
+// Расписание
+@import "blocks/timetable";
+
+// События в расписании
+@import "blocks/timetable_event";
 
 // Модалки =====================================================

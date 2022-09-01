@@ -1,0 +1,49 @@
+.timetable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 6px;
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 6px;
+		&_dates {
+			& > .timetable__col {
+				height: 44px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 14px;
+			}
+		}
+	}
+
+	&__col {
+		position: relative;
+		border-radius: 10px;
+		background: $gray-6;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		color: $gray-5;
+		width: 132px;
+		height: 72px;
+
+		&_empty {
+			background-color: transparent;
+			width: 44px;
+		}
+
+		&_time {
+			width: 44px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+		}
+	}
+}

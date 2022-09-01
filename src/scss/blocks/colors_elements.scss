@@ -7,3 +7,21 @@
 .gradient-green {
 	background: $linear-green;
 }
+
+//==========================================================
+
+.pink {
+	background-color: $pink;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: darken($color: $pink, $amount: 10);
+	}
+}
+
+.green {
+	background-color: $green-2;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: darken($color: $green-2, $amount: 10);
+	}
+}
