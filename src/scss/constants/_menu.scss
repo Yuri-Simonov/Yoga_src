@@ -1,0 +1,161 @@
+.menu {
+	&_active {
+		.menu__content {
+			transition: 0.3s;
+			@media (max-width: 1500px) {
+				transform: translateX(0);
+			}
+		}
+
+		.menu__overlay {
+			@media (max-width: 1500px) {
+				display: block;
+			}
+		}
+	}
+
+	&__content {
+		position: fixed;
+		z-index: 5;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		overflow: auto;
+		background: $white;
+		padding: 20px 22px 20px 28px;
+		transition: 0.3s;
+		@media (max-width: 1500px) {
+			transform: translateX(-100%);
+		}
+		@media (max-width: 440px), (max-height: 440px) {
+			padding: 15px;
+			width: 260px;
+		}
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		max-height: 100vh;
+	}
+
+	&__overlay {
+		display: none;
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: $gray-3;
+		opacity: 0.5;
+	}
+
+	&__header {
+		margin-bottom: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		@media (max-width: 440px), (max-height: 440px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__header-img {
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 50%;
+
+		@media (max-width: 440px), (max-height: 440px) {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	&__header-name {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 150%;
+		color: $black;
+	}
+
+	&__header-role {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 150%;
+		color: $gray-3;
+	}
+
+	&__body {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__sections {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+
+		@media (max-width: 440px), (max-height: 440px) {
+			gap: 6px;
+		}
+	}
+
+	&__section {
+		cursor: pointer;
+		position: relative;
+		padding: 13px 30px 13px 13px;
+		display: flex;
+		align-items: center;
+		gap: 18px;
+
+		a {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 150%;
+			color: $gray-3;
+		}
+
+		& > svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		&_active {
+			background: $purple-2;
+			border-radius: 10px;
+
+			svg {
+				path {
+					fill: transparent;
+					stroke: $white;
+				}
+			}
+
+			a {
+				color: $white;
+			}
+		}
+
+		transition: all 0.3s ease;
+		&:hover {
+			@extend .menu__section_active;
+		}
+
+		&:last-child {
+			margin-top: auto;
+		}
+	}
+	&__section-arrow {
+		position: absolute;
+		top: 50%;
+		right: 14px;
+		transform: translateY(-50%);
+	}
+}

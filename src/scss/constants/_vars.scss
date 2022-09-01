@@ -4,9 +4,45 @@
 $white: #ffffff;
 
 $black: #000000;
+$black-2: #292d32;
 
 $gray: #b8b8b8;
+$gray-2: #fafbff;
+$gray-3: #9197b3;
+$gray-4: #acacac;
+$gray-5: #757575;
+$gray-6: #f0f0f0;
+$gray-7: #f3f6ff;
 
 $purple: #4623e9;
 $purple-2: #5932ea;
+
+$green: #00ac4f;
+$green-2: #f3fff6;
+$green-3: #d3ffe7;
+
+$red: #d0004b;
+$red-2: #da001a;
+
+$pink: #fff0fb;
+$pink-2: #ffa3cf;
+
+$blue: #caf1ff;
+//===================================================
+
+// Градиенты ========================================
+$linear-green: linear-gradient(201.18deg, #d3ffe7 3.14%, #effff6 86.03%);
+$linear-blue: linear-gradient(201.18deg, #caf1ff 3.14%, #cdf4ff 86.03%);
+$linear-pink: linear-gradient(201.18deg, #ffa3cf 3.14%, #ffd5f3 86.03%);
+$linear-purple: linear-gradient(136.05deg, #eaabf0 10.05%, #4623e9 93.16%);
+$linear-purple-2: linear-gradient(45deg, #eaabf0 10.06%, #4623e9 93.15%);
+
+$radian: radial-gradient(
+	55.4% 49.27% at 51.44% 49.99%,
+	#c4c4c4 0%,
+	#d6d6d6 18%,
+	#ececec 48%,
+	#fafafa 76%,
+	#ffffff 100%
+);
 //===================================================

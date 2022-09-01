@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include("./html/html_prime/head.html", {title: "Главная"})
+
+	<body>
+		<div class="wrapper">
+			<main class="auth">
+				<div class="auth__form">
+					<form action="#" class="auth-form">
+						<h1 class="title">Sign in</h1>
+						<div class="auth-form__prompt">
+							<span>Don't have an account yet?</span
+							><a href="sign_up.html">Sign up</a>
+						</div>
+						<div class="auth-form__fields">
+							<div class="field">
+								<label>
+									<span>Email</span>
+									<input
+										type="text"
+										placeholder="rosemarie@domain.com"
+									/>
+								</label>
+							</div>
+							<div class="field">
+								<label>
+									<span>Password</span>
+									<input
+										type="password"
+										placeholder="********"
+									/>
+								</label>
+							</div>
+						</div>
+						<div class="auth-form__submit">
+							<button class="submit" type="submit">
+								Sign in
+							</button>
+						</div>
+					</form>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

@@ -1,8 +1,5 @@
 // Переменные ================================================
 
-// Ширина внешнего контейнера
-$outer_container: 1920px;
-
 // Ширина внутреннего контейнера
 $inner_container: 1480px;
 
@@ -32,20 +29,6 @@ $font_color_common: #000000;
 	flex-direction: column;
 }
 
-// Внешний контейнер
-.container-outer {
-	margin: 0 auto;
-	overflow: hidden;
-	@media (min-width: ($outer_container + 1px)) {
-		width: $outer_container;
-	}
-	@media (max-width: $outer_container) {
-		width: 100%;
-	}
-	max-width: $outer_container;
-	margin: 0 auto;
-}
-
 // Внутренний контейнер
 .container-inner {
 	max-width: $inner_container;
@@ -58,8 +41,13 @@ body {
 	font-size: $font_size_common;
 	line-height: $font_line-height_common;
 	color: $font_color_common;
+	background: $gray-2;
 }
 
 main {
 	flex-grow: 1;
+}
+
+.lock {
+	overflow: hidden;
 }

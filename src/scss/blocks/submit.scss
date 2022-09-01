@@ -1,0 +1,19 @@
+.submit {
+	width: 286px;
+	min-height: 38px;
+	background: $purple-2;
+	border-radius: 20px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
+	color: $white;
+
+	transition: all 0.3s ease;
+	&:hover {
+		background: darken($color: $purple-2, $amount: 15);
+	}
+}
