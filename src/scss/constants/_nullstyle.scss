@@ -94,22 +94,3 @@ select {
 button {
 	background-color: inherit;
 }
-
-* {
-	// стилизация скролла для Firefox
-	scrollbar-color: $black $white; /* «цвет ползунка» «цвет полосы скроллбара» */
-	scrollbar-width: thin;
-	// стилизация скролла для Chrome
-	&::-webkit-scrollbar {
-		// это фон самого скроллбара
-		background-color: $white;
-		border-radius: 5px;
-		width: 5px;
-		height: 5px;
-	}
-	&::-webkit-scrollbar-thumb {
-		// индикатор прокрутки, перетаскиваемый элемент.
-		background-color: $black;
-		border-radius: 5px;
-	}
-}
