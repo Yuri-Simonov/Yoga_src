@@ -112,22 +112,6 @@ button {
   background-color: inherit;
 }
 
-* {
-  scrollbar-color: #000000 #ffffff;
-  /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-width: thin;
-}
-*::-webkit-scrollbar {
-  background-color: #ffffff;
-  border-radius: 5px;
-  width: 5px;
-  height: 5px;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border-radius: 5px;
-}
-
 .header__body {
   padding: 28px 0;
   display: flex;
@@ -223,6 +207,22 @@ main {
 
 .lock {
   overflow: hidden;
+}
+
+* {
+  scrollbar-color: #5932ea #ffffff;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #5932ea;
+  border-radius: 5px;
 }
 
 .menu_active .menu__content {

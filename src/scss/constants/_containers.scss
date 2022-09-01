@@ -51,3 +51,22 @@ main {
 .lock {
 	overflow: hidden;
 }
+
+* {
+	// стилизация скролла для Firefox
+	scrollbar-color: $purple-2 $white; /* «цвет ползунка» «цвет полосы скроллбара» */
+	scrollbar-width: thin;
+	// стилизация скролла для Chrome
+	&::-webkit-scrollbar {
+		// это фон самого скроллбара
+		background-color: $white;
+		border-radius: 5px;
+		width: 5px;
+		height: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		// индикатор прокрутки, перетаскиваемый элемент.
+		background-color: $purple-2;
+		border-radius: 5px;
+	}
+}
