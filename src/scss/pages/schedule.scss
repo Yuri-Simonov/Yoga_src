@@ -7,7 +7,10 @@
 		display: flex;
 		gap: 35px;
 		margin-bottom: 30px;
-		overflow: auto;
+		max-height: 778px;
+		@media (max-width: 1110px) {
+			overflow: auto;
+		}
 	}
 	&__timetable {
 		flex: 0 0 1075px;
@@ -20,9 +23,12 @@
 
 	&__sidebar {
 		flex: 0 0 370px;
-		background-color: $white;
 		border-radius: 20px;
-		padding: 27px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 25px;
 	}
 
 	&__sidebar-calendar {

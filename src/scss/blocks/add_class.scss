@@ -1,2 +1,47 @@
 .add-class {
+	background-color: $white;
+	padding: 27px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	&__content {
+	}
+
+	&__form {
+	}
+
+	&__fields {
+	}
+
+	&__submit {
+	}
+	.title {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.field {
+		margin-bottom: 16px;
+		input {
+			padding-left: 40px;
+		}
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 11px;
+			display: block;
+			background: $linear-purple;
+			border-radius: 50%;
+		}
+	}
+	.submit {
+	}
 }

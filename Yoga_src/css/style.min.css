@@ -201,7 +201,7 @@ button {
 
 .container-inner {
   flex-grow: 1;
-  max-width: 1480px;
+  max-width: 1510px;
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
@@ -652,7 +652,12 @@ main {
   display: flex;
   gap: 35px;
   margin-bottom: 30px;
-  overflow: auto;
+  max-height: 778px;
+}
+@media (max-width: 1110px) {
+  .schedule__content {
+    overflow: auto;
+  }
 }
 .schedule__timetable {
   flex: 0 0 1075px;
@@ -663,9 +668,12 @@ main {
 }
 .schedule__sidebar {
   flex: 0 0 370px;
-  background-color: #ffffff;
   border-radius: 20px;
-  padding: 27px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
 }
 .auth-form {
   position: relative;
@@ -747,7 +755,7 @@ main {
   height: 38px;
   padding: 10px 40px 6px 19px;
   background: #fafbff;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .field input::placeholder {
   color: #acacac;
@@ -805,6 +813,10 @@ main {
   background: linear-gradient(201.18deg, #d3ffe7 3.14%, #effff6 86.03%);
 }
 
+.gradient-purple {
+  background: linear-gradient(136.05deg, #eaabf0 10.05%, #4623e9 93.16%);
+}
+
 .pink {
   background-color: #fff0fb;
   transition: all 0.3s ease;
@@ -819,6 +831,109 @@ main {
 }
 .green:hover {
   background-color: #c0ffd0;
+}
+
+.add-class {
+  background-color: #ffffff;
+  padding: 27px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.add-class .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.add-class .field {
+  margin-bottom: 16px;
+  position: relative;
+}
+.add-class .field input {
+  padding-left: 40px;
+}
+.add-class .field::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 11px;
+  display: block;
+  background: linear-gradient(136.05deg, #eaabf0 10.05%, #4623e9 93.16%);
+  border-radius: 50%;
+}
+.calendar {
+  padding: 27px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.calendar__content {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #acacac;
+}
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 274px;
+  margin: 0 auto;
+}
+.calendar__header svg:first-child {
+  transform: rotate(180deg);
+}
+.calendar__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 6px;
+}
+.calendar__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.calendar__row_dayofweek .calendar__col {
+  background: transparent;
+}
+.calendar__row_active {
+  padding: 3px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin: -3px;
+}
+.calendar__col {
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #fafbff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.calendar__col_now {
+  transition: 0.3s;
+  background: linear-gradient(136.05deg, #eaabf0 10.05%, #4623e9 93.16%);
+  color: #ffffff;
+}
+.calendar__col:hover {
+  background: #5932ea;
+  color: #ffffff;
+}
+.calendar .title {
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .timetable {
