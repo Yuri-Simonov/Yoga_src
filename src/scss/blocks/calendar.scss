@@ -2,6 +2,12 @@
 	padding: 27px;
 	background-color: $white;
 	border-radius: 20px;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+	@media (max-width: 374px), (max-height: 440px) {
+		padding: 20px 0;
+	}
 	&__content {
 		font-weight: 500;
 		font-size: 14px;
