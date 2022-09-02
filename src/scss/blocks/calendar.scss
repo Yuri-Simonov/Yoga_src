@@ -1,0 +1,89 @@
+.calendar {
+	padding: 27px;
+	background-color: $white;
+	border-radius: 20px;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+	@media (max-width: 374px) {
+		padding: 20px 0;
+	}
+	&__content {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		color: $gray-4;
+	}
+
+	&__month {
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 274px;
+		margin: 0 auto;
+
+		svg:first-child {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 6px;
+
+		&_dayofweek {
+			.calendar__col {
+				background: transparent;
+			}
+		}
+
+		&_active {
+			padding: 3px;
+			background: $gray-6;
+			border-radius: 10px;
+			margin: -3px;
+		}
+	}
+
+	&__col {
+		cursor: pointer;
+		width: 34px;
+		height: 34px;
+		border-radius: 10px;
+		background: $gray-2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.3s;
+		&_now {
+			transition: 0.3s;
+			background: $linear-purple;
+			color: $white;
+		}
+
+		&:hover {
+			background: $purple-2;
+			color: $white;
+		}
+	}
+
+	.title {
+		text-align: center;
+		margin-bottom: 8px;
+	}
+}

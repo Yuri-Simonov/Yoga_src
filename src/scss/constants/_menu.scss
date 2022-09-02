@@ -2,13 +2,13 @@
 	&_active {
 		.menu__content {
 			transition: 0.3s;
-			@media (max-width: 1500px) {
+			@media (max-width: 2100px) {
 				transform: translateX(0);
 			}
 		}
 
 		.menu__overlay {
-			@media (max-width: 1500px) {
+			@media (max-width: 2100px) {
 				display: block;
 			}
 		}
@@ -24,7 +24,7 @@
 		background: $white;
 		padding: 20px 22px 20px 28px;
 		transition: 0.3s;
-		@media (max-width: 1500px) {
+		@media (max-width: 2100px) {
 			transform: translateX(-100%);
 		}
 		@media (max-width: 440px), (max-height: 440px) {
