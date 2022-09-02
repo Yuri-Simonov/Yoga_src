@@ -1,8 +1,5 @@
 .timetable {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
 	flex-direction: column;
 	gap: 6px;
 	@media (max-width: 1100px) {
@@ -11,8 +8,6 @@
 
 	&__row {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		gap: 6px;
 		&_dates {
 			& > .timetable__col {
@@ -26,6 +21,7 @@
 	}
 
 	&__col {
+		flex-grow: 1;
 		position: relative;
 		border-radius: 10px;
 		background: $gray-6;
@@ -38,11 +34,11 @@
 
 		&_empty {
 			background-color: transparent;
-			width: 44px;
+			flex: 0 0 44px;
 		}
 
 		&_time {
-			width: 44px;
+			flex: 0 0 44px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
