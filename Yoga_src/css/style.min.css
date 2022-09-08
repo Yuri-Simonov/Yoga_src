@@ -151,6 +151,7 @@ button {
   transform: translateY(-50%);
 }
 .header__search input {
+  width: 100%;
   background: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -850,14 +851,16 @@ main {
   line-height: 150%;
   color: #000000;
 }
-.field input {
+.field input,
+.field select {
   width: 100%;
   height: 38px;
   padding: 10px 40px 6px 19px;
   background: #fafbff;
   border-radius: 10px;
 }
-.field input::placeholder {
+.field input::placeholder,
+.field select::placeholder {
   color: #acacac;
 }
 
@@ -1196,6 +1199,7 @@ main {
   right: 12px;
 }
 .employee__dropdown-body {
+  display: none;
   position: absolute;
   z-index: 2;
   top: 30px;
@@ -1207,6 +1211,9 @@ main {
     left: initial;
     right: 0px;
   }
+}
+.employee__dropdown-body_active {
+  display: block;
 }
 .employee__dropdown-link, .employee__dropdown-remove {
   display: block;
@@ -1225,4 +1232,80 @@ main {
 }
 .employee__dropdown-remove {
   color: #da001a;
+}
+
+.add-employee {
+  min-height: 760px;
+  background-color: #ffffff;
+  padding: 27px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media (max-width: 1540px) {
+  .add-employee {
+    width: 100%;
+    min-height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .add-employee {
+    width: 100%;
+    align-items: stretch;
+  }
+}
+@media (max-width: 374px) {
+  .add-employee {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 374px) {
+  .add-employee__content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+.add-employee__fields {
+  margin-bottom: 40px;
+}
+@media (max-width: 1540px) {
+  .add-employee__fields {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 16px;
+  }
+}
+@media (max-width: 992px) {
+  .add-employee__fields {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1540px) {
+  .add-employee__fields > * {
+    flex: 1 1 20%;
+  }
+}
+@media (max-width: 992px), (max-height: 440px) {
+  .add-employee__fields > * {
+    flex: 1 1 48%;
+  }
+}
+@media (max-width: 576px) {
+  .add-employee__fields > * {
+    flex: 1 1 100%;
+  }
+}
+.add-employee .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.add-employee .field {
+  margin-bottom: 16px;
+}
+.add-employee .submit {
+  margin: 0 auto;
 }

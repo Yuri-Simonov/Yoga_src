@@ -52,6 +52,7 @@
 	}
 
 	&__dropdown-body {
+		display: none;
 		position: absolute;
 		z-index: 2;
 		top: 30px;
@@ -60,6 +61,10 @@
 			width: 300px;
 			left: initial;
 			right: 0px;
+		}
+
+		&_active {
+			display: block;
 		}
 	}
 
