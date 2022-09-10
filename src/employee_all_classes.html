@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include("./html/html_prime/head.html", {title: "Dashboard"})
+
+	<body>
+		<div class="wrapper">
+			@@include("./html/html_prime/header.html")
+			<main class="employee-all">
+				<div class="container-inner">
+					<div class="employee-all__content">
+						<div class="employee-all__left">
+							<div class="employee-all__person">
+								<img
+									src="./img/img/Kacey.png"
+									alt="avatar"
+									class="employee-all__person-img"
+								/>
+								<div class="employee-all__person-about">
+									<span class="employee-all__person-name"
+										>Kacey Cardenas</span
+									>
+									<span class="employee-all__person-prof"
+										>Teacher</span
+									>
+								</div>
+								<a
+									href="#"
+									class="employee-all__person-settings"
+								>
+									@@include('./img/svg/settings.svg')
+								</a>
+							</div>
+							<div class="employee-all__classes">
+								<div class="employee-all__classes-wrapper">
+									<div
+										class="employee-all__class employee-all__class_header"
+									>
+										<span class="employee-all__class-item"
+											>Date</span
+										>
+										<span class="employee-all__class-item"
+											>Time</span
+										>
+										<span class="employee-all__class-item"
+											>Type of class</span
+										>
+										<span class="employee-all__class-item"
+											>Count of customers</span
+										>
+										<span class="employee-all__class-item"
+											>Classes per day</span
+										>
+										<span
+											class="employee-all__class-item"
+										></span>
+									</div>
+									<div
+										class="employee-all__class employee-all__class_total"
+									>
+										<span
+											class="employee-all__class-item"
+										></span>
+										<span
+											class="employee-all__class-item"
+										></span>
+										<span
+											class="employee-all__class-item"
+										></span>
+										<span class="employee-all__class-item"
+											>187</span
+										>
+										<span class="employee-all__class-item"
+											>12</span
+										>
+										<span
+											class="employee-all__class-item"
+										></span>
+									</div>
+									<div class="employee-all__class">
+										<span class="employee-all__class-item"
+											>2023-01-12</span
+										>
+										<span class="employee-all__class-item"
+											>8.30 - 10.00</span
+										>
+										<span class="employee-all__class-item"
+											>Hatha</span
+										>
+										<span class="employee-all__class-item"
+											>12</span
+										>
+										<span class="employee-all__class-item"
+											>3</span
+										>
+										<span
+											class="employee-all__class-item"
+										></span>
+									</div>
+									<div class="employee-all__class">
+										<span class="employee-all__class-item"
+											>2023-02-12</span
+										>
+										<span class="employee-all__class-item"
+											>9.30 - 10.00</span
+										>
+										<span class="employee-all__class-item"
+											>Hatha</span
+										>
+										<span class="employee-all__class-item"
+											>1224</span
+										>
+										<span class="employee-all__class-item"
+											>32</span
+										>
+										<span
+											class="employee-all__class-item"
+										></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="employee-all__sidebar">
+							@@include("./html/html_blocks/calendar.html")
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include("./html/html_prime/menu.html")
+			<!-- @@include("./html/html_prime/footer.html") -->
+		</div>
+		<script src="js/script.min.js"></script>
+	</body>
+</html>
