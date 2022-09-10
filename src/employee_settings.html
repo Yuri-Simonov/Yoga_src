@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include("./html/html_prime/head.html", {title: "Dashboard"})
+
+	<body>
+		<div class="wrapper">
+			@@include("./html/html_prime/header.html")
+			<main class="employee-settings">
+				<div class="container-inner">
+					<div class="employee-settings__content">
+						<div class="employee-settings__form">
+							<img
+								src="./img/img/anonymous.png"
+								alt="avatar"
+								class="employee-settings__avatar"
+							/>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Firstname</span>
+										<input
+											type="text"
+											placeholder="Bryce"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Lastname</span>
+										<input
+											type="text"
+											placeholder="Haworth"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Date of birth</span>
+										<input
+											type="text"
+											placeholder="1989-02-05"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Occupation</span>
+										<input
+											type="text"
+											placeholder="Teacher"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Phone number</span>
+										<input
+											type="text"
+											placeholder="+1 (555) 555-1234"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Email</span>
+										<input
+											type="text"
+											placeholder="bryce@domain.com"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__submit">
+								<button class="submit" type="submit">
+									Sign in
+								</button>
+							</div>
+						</div>
+						<div class="employee-settings__form">
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Old password</span>
+										<input
+											type="password"
+											value="Teacher"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Password</span>
+										<input
+											type="password"
+											value="+1 (555) 555-1234"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__field">
+								<div class="field">
+									<label>
+										<span>Confirm password</span>
+										<input
+											type="password"
+											value="bryce@domain.com"
+										/>
+									</label>
+								</div>
+							</div>
+							<div class="employee-settings__submit">
+								<button class="submit" type="submit">
+									Sign in
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include("./html/html_prime/menu.html")
+			<!-- @@include("./html/html_prime/footer.html") -->
+		</div>
+		<script src="js/script.min.js"></script>
+	</body>
+</html>
