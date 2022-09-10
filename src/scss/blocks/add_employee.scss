@@ -1,0 +1,69 @@
+.add-employee {
+	min-height: 760px;
+	background-color: $white;
+	padding: 27px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	@media (max-width: 1540px) {
+		width: 100%;
+		min-height: auto;
+	}
+	@media (max-width: 768px) {
+		width: 100%;
+		align-items: stretch;
+	}
+	@media (max-width: 374px) {
+		padding: 20px 0;
+	}
+	&__content {
+		@media (max-width: 374px) {
+			max-width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	&__form {
+	}
+
+	&__fields {
+		margin-bottom: 40px;
+		@media (max-width: 1540px) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 0 16px;
+		}
+		@media (max-width: 992px) {
+			margin-bottom: 20px;
+		}
+
+		& > * {
+			@media (max-width: 1540px) {
+				flex: 1 1 20%;
+			}
+			@media (max-width: 992px), (max-height: 440px) {
+				flex: 1 1 48%;
+			}
+			@media (max-width: 576px) {
+				flex: 1 1 100%;
+			}
+		}
+	}
+
+	&__submit {
+	}
+	.title {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.field {
+		margin-bottom: 16px;
+	}
+	.submit {
+		margin: 0 auto;
+	}
+}

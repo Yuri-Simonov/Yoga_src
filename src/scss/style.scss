@@ -35,6 +35,12 @@
 // Страница Schedule
 @import "pages/schedule";
 
+// Страница Employees
+@import "pages/employees";
+
+// Страница с конкретным Employee
+@import "pages/employee_all";
+
 // Повторяющиеся блоки =========================================
 
 // Форма авторизации и регистрации
@@ -63,5 +69,11 @@
 
 // События в расписании
 @import "blocks/timetable_event";
+
+// Человек на странице персонала
+@import "blocks/employee";
+
+// форма создания нового сотрудника
+@import "blocks/add_employee";
 
 // Модалки =====================================================
