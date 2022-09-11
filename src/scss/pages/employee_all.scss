@@ -96,9 +96,6 @@
 		background: $white;
 		padding: 33px;
 		border-radius: 20px;
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
 		max-width: 100%;
 		overflow: auto;
 
@@ -114,7 +111,6 @@
 	&__class {
 		display: flex;
 		align-items: center;
-		height: 100%;
 		gap: 6px;
 
 		&:nth-child(even) {
