@@ -1,0 +1,26 @@
+.infofield {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+	text-align: left;
+
+	&__name,
+	&__info {
+		flex: 1 0 48%;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		color: $black;
+		background: $gray-2;
+		border-radius: 10px;
+		padding: 6px 25px;
+		min-height: 34px;
+	}
+
+	&__name {
+	}
+
+	&__info {
+	}
+}

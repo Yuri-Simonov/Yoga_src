@@ -52,6 +52,9 @@
 // Поле ввода (инпут)
 @import "blocks/field";
 
+// Поле с информацией
+@import "blocks/infofield";
+
 // Кнопка отправки формы
 @import "blocks/submit";
 
@@ -80,6 +83,6 @@
 @import "blocks/add_employee";
 
 // настройки сотрудника
-@import "blocks/employee_settings";
+@import "blocks/settings";
 
 // Модалки =====================================================
